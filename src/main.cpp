@@ -17,22 +17,22 @@ int main(int argc, char* argv[]) {
 	 * (Proxy<t_Product>) to register the corresponding concrete product
 	 * i.e., to bind the concrete product together with a name ("fourier").
 	 */	
-	ConcreteFactory<Pusher,BorisPusher> boris("boris");
-	ConcreteFactory<Pusher,LittlejohnPusher> littlejohn("littlejohn");
+	ConcreteFactory<Pusher, BorisPusher> boris("boris");
+	ConcreteFactory<Pusher, LittlejohnPusher> littlejohn("littlejohn");
 		
-	ConcreteFactory<Initializer,Maxwellian> maxwellian("maxwellian"); 
-	ConcreteFactory<Initializer,SlowingDown> slowingdown("slowingdown");
-	ConcreteFactory<Initializer,Uniform> uniform("uniform");
-	ConcreteFactory<Initializer,Passing> passing("passing");
-	ConcreteFactory<Initializer,Trapped> trapped("trapped");
+	ConcreteFactory<Initializer, Maxwellian> maxwellian("maxwellian"); 
+	ConcreteFactory<Initializer, SlowingDown> slowingdown("slowingdown");
+	ConcreteFactory<Initializer, Uniform> uniform("uniform");
+	ConcreteFactory<Initializer, Passing> passing("passing");
+	ConcreteFactory<Initializer, Trapped> trapped("trapped");
 
-	ConcreteFactory<Particle,Electron> electron("electron"); 
-	ConcreteFactory<Particle,Tritium> tritium("tritium");
-	ConcreteFactory<Particle,Deuterium> deuterium("deuterium");
-	ConcreteFactory<Particle,Helium> helium("helium");
+	ConcreteFactory<Particle, Electron> electron("electron"); 
+	ConcreteFactory<Particle, Tritium> tritium("tritium");
+	ConcreteFactory<Particle, Deuterium> deuterium("deuterium");
+	ConcreteFactory<Particle, Helium> helium("helium");
 	
     /**
-	 * The Proxy tell the factory to produce the concrete product 
+	 * The Proxy requests the factory to produce a concrete product 
  	 * according to the regedit (the name-ConcreteFactory pair),
  	 * which is analog to the polymorphic new of a normal factory 
  	 * method, e.g., product = factory->produce(), instead, we have	
@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
 	tokamak->loadParticle("input_file/particle.in");
 
 	std::ofstream pofs("test");
-	pofs << *(tokamak->particle_list["alpha_particle_"]) ;	
+	pofs << *(tokamak->particle_list["alpha_particle_"]);	
 
 	//tokamak->pushParticle(0.01);
 

@@ -1,0 +1,46 @@
+
+! particle #1 ---------------------------------
+	name						=   alpha_particle_
+	species						=	helium
+	initial distribution 		=	maxwellian
+	push algorithm				=	boris
+	number of markers			=	100000
+	drift velocity				=	0
+	characteristic velocity		=	100
+
+! particle #2 ---------------------------------
+	name						=   trapped_electron_
+	species     				=   electron
+	initial distribution 		=	trapped	
+	push algorithm				=	littlejohn
+	number of markers			=	100
+	drift velocity				=	0
+	characteristic velocity		=	100
+
+! particle #3 ---------------------------------
+	name						=   passing_electron_
+	species     				=	electron
+	initial distribution 		=	passing
+	push algorithm				=	littlejohn
+	number of markers			=	100
+	drift velocity				=	0
+	characteristic velocity		=	100
+
+! particle #4 ---------------------------------
+	name						=   hot_deuterium_
+	species     				=   deuterium
+	initial distribution 		=	maxwellian
+	push algorithm				=	littlejohn
+	number of markers			=	100
+	drift velocity				=	0
+	characteristic velocity		=	100
+
+! particle #5 ---------------------------------
+	name						=   hot_tritium_
+	species     				=   tritium
+	initial distribution 		=	maxwellian
+	push algorithm				=	littlejohn
+	number of markers			=	100
+	drift velocity				=	0
+	characteristic velocity		=	100
+
